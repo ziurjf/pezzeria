@@ -1,6 +1,6 @@
 import { formatCurrency } from "../utils/format";
 
-const Navbar = () => {
+const Navbar = ({ setView }) => {
   const total = 25000;
   const token = false;
 
@@ -10,16 +10,16 @@ const Navbar = () => {
         <span>Pizzería Mamma mía!</span>
       </div>
       <div>
-        <button>🍕 Home</button>
+        <button onClick={() => setView("home")}>🍕 Home</button>
         {token ? (
           <>
-            <button>🔓 Profile</button>
-            <button>🔒 Logout</button>
+            <button onClick={() => setView("profile")}>🔓 Profile</button>
+            <button onClick={() => setView("logout")}>🔒 Logout</button>
           </>
         ) : (
           <>
-            <button>🔐 Accseso</button>
-            <button>🔐 Registro</button>
+            <button onClick={() => setView("login")}>🔐 Acceso</button>
+            <button onClick={() => setView("register")}>📝 Registro</button>
           </>
         )}
         <button>🛒 Total: ${formatCurrency(total)}</button>
