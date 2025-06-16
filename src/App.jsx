@@ -1,32 +1,27 @@
-
-import { useState } from 'react';
-import './App.css';
-import LoginPage from './components/Acceso';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Navbar from './components/Navbar';
-import RegisterPage from './components/Registro';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import { AuthProvider } from "./context/AuthContext";
+import { CartProvider } from "./context/CartContext";
+import Cart from "./components/Cart";
 
 function App() {
-  const [view, setView] = useState("home");
-
-  const renderView = () => {
-    switch (view) {
-      case "login":
-        return <LoginPage />;
-      case "register":
-        return <RegisterPage />;
-      default:
-        return <Home />;
-    }
-  };
-
   return (
-    <>
-      <Navbar setView={setView} />
-      {renderView()}
-      <Footer />
-    </>
+    <AuthProvider>
+      <CartProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+          <Footer />
+      </CartProvider>
+    </AuthProvider>
   );
 }
 
