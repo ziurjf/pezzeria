@@ -1,34 +1,32 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
-// import RegisterPage from "./components/RegisterPage";
-// import LoginPage from "./components/LoginPage";
-// import Cart from "./components/Cart";
-import Pizza from "./components/Pizza";
 
-const App = () => (
-  <div>
-    <Navbar />
+// Importar páginas
+import Home from "./pages/Home";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
+import Cart from "./pages/Cart";
+import Pizza from "./pages/Pizza";
+import Profile from "./pages/Profile";
+import NotFound from "./pages/NotFound";
 
-    {/* Para mostrar el listado de pizzas (Hito 4 consumiendo API):
-        <Home /> */}
-
-    {/* Visualizar formulario de registro:
-        <RegisterPage /> */}
-
-    {/* Visualizar formulario de login:
-        <LoginPage /> */}
-
-    {/* Visualizar carrito simulado:
-        <Cart /> */}
-
-    {/* Mostrar detalle de una pizza (Hito 4):
-    */}
-    <Pizza />
-
-    <Footer />
-  </div>
-);
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/pizza/:id" element={<Pizza />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+};
 
 export default App;
-
