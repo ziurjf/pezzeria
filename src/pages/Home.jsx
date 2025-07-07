@@ -1,27 +1,17 @@
-import { useState, useEffect } from "react";
-import Header from "./Header";
-import CardPizza from "./CardPizza";
+import { useCart } from "../context/CartContext";
+import { formatCurrency } from "../utils/format";
 
-const Home = () => {
-  const [pizzas, setPizzas] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/pizzas")
-      .then((res) => res.json())
-      .then((data) => setPizzas(data))
-      .catch((error) => console.error("Error al cargar las pizzas:", error));
-  }, []);
+const CardPizza = ({ pizza }) => {
+  const { addToCart } = useCart();
 
   return (
-    <div>
-      <Header />
-      <div className="cards-container">
-        {pizzas.map((pizza) => (
-          <CardPizza key={pizza.id} pizza={pizza} />
-        ))}
-      </div>
+    <div className="card-pizza">
+      <h3>{pizza.name}</h3>
+      <img src={pizza.img} alt={pizza.name} width={200} />
+      <p>{formatCurrency(pizza.price)}</p>
+      <button onClick={() => addToCart(pizza)}>Añadir</button>
     </div>
   );
 };
 
-export default Home;
+export default CardPizza;

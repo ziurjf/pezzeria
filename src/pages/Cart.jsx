@@ -1,27 +1,33 @@
-import React from "react";
 import { useCart } from "../context/CartContext";
 import { formatCurrency } from "../utils/format";
 
 const Cart = () => {
-  const { cartItems, addToCart, removeFromCart, clearCart, total } = useCart();
-
-  if (cartItems.length === 0)
-    return <p>El carrito está vacío. Agregá pizzas para comprar.</p>;
+  const {
+    cart,
+    incrementQuantity,
+    decrementQuantity,
+    removeFromCart,
+    getTotal,
+  } = useCart();
 
   return (
-    <div className="cart">
-      <h2>Carrito de Compras</h2>
-      <ul>
-        {cartItems.map((item) => (
-          <li key={item.id}>
-            <strong>{item.name}</strong> - {formatCurrency(item.price)} x {item.quantity}
-            <button onClick={() => addToCart(item)}>+</button>
-            <button onClick={() => removeFromCart(item.id)}>-</button>
-          </li>
-        ))}
-      </ul>
-      <h3>Total: {formatCurrency(total)}</h3>
-      <button onClick={clearCart}>Vaciar carrito</button>
+    <div>
+      <h2>Carrito de compras</h2>
+      {cart.length === 0 ? (
+        <p>No hay productos en el carrito.</p>
+      ) : (
+        <ul>
+          {cart.map((item) => (
+            <li key={item.id}>
+              {item.name} - {formatCurrency(item.price)} x {item.quantity}
+              <button onClick={() => decrementQuantity(item.id)}>-</button>
+              <button onClick={() => incrementQuantity(item.id)}>+</button>
+              <button onClick={() => removeFromCart(item.id)}>Eliminar</button>
+            </li>
+          ))}
+        </ul>
+      )}
+      <h3>Total: {formatCurrency(getTotal())}</h3>
     </div>
   );
 };

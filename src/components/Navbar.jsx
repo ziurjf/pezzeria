@@ -3,19 +3,15 @@ import { useCart } from "../context/CartContext";
 import { formatCurrency } from "../utils/format";
 
 const Navbar = () => {
-  const { total } = useCart();
+  const { getTotal } = useCart();
 
   return (
     <nav>
-      <ul>
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/register">Registro</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li><Link to="/profile">Perfil</Link></li>
-        <li>
-          <Link to="/cart">🛒 Total: {formatCurrency(total)}</Link>
-        </li>
-      </ul>
+      <Link to="/">Inicio</Link> |{" "}
+      <Link to="/register">Registrarse</Link> |{" "}
+      <Link to="/login">Iniciar Sesión</Link> |{" "}
+      <Link to="/profile">Perfil</Link> |{" "}
+      <Link to="/cart">🛒 Total: {formatCurrency(getTotal())}</Link>
     </nav>
   );
 };
