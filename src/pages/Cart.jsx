@@ -1,33 +1,28 @@
 import { useCart } from "../context/CartContext";
+import { useUser } from "../context/UserContext";
 import { formatCurrency } from "../utils/format";
 
 const Cart = () => {
-  const {
-    cart,
-    incrementQuantity,
-    decrementQuantity,
-    removeFromCart,
-    getTotal,
-  } = useCart();
+  const { cart, addToCart, removeFromCart, total } = useCart();
+  const { token } = useUser();
 
   return (
     <div>
-      <h2>Carrito de compras</h2>
+      <h2>Carrito</h2>
       {cart.length === 0 ? (
-        <p>No hay productos en el carrito.</p>
+        <p>El carrito está vacío</p>
       ) : (
-        <ul>
-          {cart.map((item) => (
-            <li key={item.id}>
-              {item.name} - {formatCurrency(item.price)} x {item.quantity}
-              <button onClick={() => decrementQuantity(item.id)}>-</button>
-              <button onClick={() => incrementQuantity(item.id)}>+</button>
-              <button onClick={() => removeFromCart(item.id)}>Eliminar</button>
-            </li>
-          ))}
-        </ul>
+        cart.map((pizza) => (
+          <div key={pizza.id}>
+            <p>{pizza.name}</p>
+            <button onClick={() => removeFromCart(pizza.id)}>-</button>
+            <span> {pizza.quantity} </span>
+            <button onClick={() => addToCart(pizza)}>+</button>
+          </div>
+        ))
       )}
-      <h3>Total: {formatCurrency(getTotal())}</h3>
+      <h3>Total: {formatCurrency(total)}</h3>
+      <button disabled={!token}>Pagar</button>
     </div>
   );
 };

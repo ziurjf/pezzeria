@@ -1,17 +1,26 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useUser } from "../context/UserContext";
 import { formatCurrency } from "../utils/format";
 
 const Navbar = () => {
-  const { getTotal } = useCart();
+  const { total } = useCart();
+  const { token, logout } = useUser();
 
   return (
     <nav>
-      <Link to="/">Inicio</Link> |{" "}
-      <Link to="/register">Registrarse</Link> |{" "}
-      <Link to="/login">Iniciar Sesión</Link> |{" "}
-      <Link to="/profile">Perfil</Link> |{" "}
-      <Link to="/cart">🛒 Total: {formatCurrency(getTotal())}</Link>
+      <Link to="/">Home</Link> |{" "}
+      <Link to="/cart">🛒 Total: {formatCurrency(total)}</Link> |{" "}
+      {token ? (
+        <>
+          <Link to="/profile">Profile</Link> |{" "}
+          <button onClick={logout}>Logout</button>
+        </>
+      ) : (
+        <>
+          <Link to="/login">Login</Link> | <Link to="/register">Register</Link>
+        </>
+      )}
     </nav>
   );
 };
