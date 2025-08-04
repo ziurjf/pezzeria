@@ -1,43 +1,48 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useUser } from "../context/UserContext";
 
-const LoginPage = () => {
-  const { login } = useAuth();
+const Login = () => {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const { login, error, success } = useUser();
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleChange = ({ target }) => {
+    setForm({ ...form, [target.name]: target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email && password) {
-      login({ email });
-      navigate("/");
-    } else {
-      alert("Completa todos los campos.");
-    }
+    await login(form);
+    navigate("/");
   };
 
   return (
-    <div>
-      <h2>Iniciar Sesión</h2>
+    <div className="container">
+      <h2>Iniciar sesión</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
+          name="email"
           placeholder="Correo"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={form.email}
+          onChange={handleChange}
+          required
         />
         <input
           type="password"
+          name="password"
           placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={form.password}
+          onChange={handleChange}
+          required
         />
-        <button type="submit">Ingresar</button>
+        <button type="submit">Iniciar sesión</button>
       </form>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      {success && <p style={{ color: "green" }}>{success}</p>}
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;

@@ -1,50 +1,48 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useUser } from "../context/UserContext";
 
-const RegisterPage = () => {
-  const { login } = useAuth();
+const Register = () => {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const { register, error, success } = useUser();
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [repeatPassword, setRepeatPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleChange = ({ target }) => {
+    setForm({ ...form, [target.name]: target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email && password && password === repeatPassword) {
-      login({ email });
-      navigate("/");
-    } else {
-      alert("Verifica que los campos estén completos y coincidan.");
-    }
+    await register(form);
+    navigate("/");
   };
 
   return (
-    <div>
-      <h2>Registro</h2>
+    <div className="container">
+      <h2>Registrarse</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
+          name="email"
           placeholder="Correo"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={form.email}
+          onChange={handleChange}
+          required
         />
         <input
           type="password"
+          name="password"
           placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Repetir contraseña"
-          value={repeatPassword}
-          onChange={(e) => setRepeatPassword(e.target.value)}
+          value={form.password}
+          onChange={handleChange}
+          required
         />
         <button type="submit">Registrarse</button>
       </form>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      {success && <p style={{ color: "green" }}>{success}</p>}
     </div>
   );
 };
 
-export default RegisterPage;
+export default Register;

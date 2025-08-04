@@ -1,9 +1,18 @@
+import { useEffect } from "react";
+import { useUser } from "../context/UserContext";
+
 const Profile = () => {
+  const { email, fetchProfile, logout } = useUser();
+
+  useEffect(() => {
+    fetchProfile();
+  }, []);
+
   return (
-    <div>
-      <h2>Mi Perfil</h2>
-      <p>Correo: usuario@email.com</p>
-      <button onClick={() => alert("Cerrar sesión (simulado)")}>Cerrar sesión</button>
+    <div className="container">
+      <h2>Perfil del usuario</h2>
+      <p><strong>Email:</strong> {email}</p>
+      <button onClick={logout}>Cerrar sesión</button>
     </div>
   );
 };

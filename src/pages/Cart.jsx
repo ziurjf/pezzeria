@@ -1,30 +1,59 @@
 import { useCart } from "../context/CartContext";
 import { useUser } from "../context/UserContext";
-import { formatCurrency } from "../utils/format";
+import formatCurrency from "../utils/formatCurrency";
+import { useState } from "react";
 
 const Cart = () => {
-  const { cart, addToCart, removeFromCart, total } = useCart();
+  const { cart, removeFromCart, getTotal } = useCart();
   const { token } = useUser();
+  const [message, setMessage] = useState("");
+
+  const handleCheckout = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/api/checkouts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ cart }),
+      });
+
+      if (res.ok) {
+        setMessage("¡Compra realizada con éxito!");
+      } else {
+        setMessage("Error al realizar la compra.");
+      }
+    } catch (err) {
+      setMessage("Ocurrió un error.");
+    }
+  };
 
   return (
-    <div>
-      <h2>Carrito</h2>
+    <div className="container">
+      <h2>Carrito de Compras</h2>
       {cart.length === 0 ? (
-        <p>El carrito está vacío</p>
+        <p>Tu carrito está vacío.</p>
       ) : (
-        cart.map((pizza) => (
-          <div key={pizza.id}>
-            <p>{pizza.name}</p>
-            <button onClick={() => removeFromCart(pizza.id)}>-</button>
-            <span> {pizza.quantity} </span>
-            <button onClick={() => addToCart(pizza)}>+</button>
-          </div>
-        ))
+        <>
+          <ul>
+            {cart.map((pizza, i) => (
+              <li key={i}>
+                {pizza.name} - {formatCurrency(pizza.price)} x {pizza.quantity}
+                <button onClick={() => removeFromCart(pizza.id)}>Eliminar</button>
+              </li>
+            ))}
+          </ul>
+          <h3>Total: {formatCurrency(getTotal())}</h3>
+          <button disabled={!token} onClick={handleCheckout}>
+            Pagar
+          </button>
+          {message && <p>{message}</p>}
+        </>
       )}
-      <h3>Total: {formatCurrency(total)}</h3>
-      <button disabled={!token}>Pagar</button>
     </div>
   );
 };
 
 export default Cart;
+

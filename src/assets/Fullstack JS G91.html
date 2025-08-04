@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<!-- saved from url=(0185)https://app.zoom.us/wc/81735350439/join?fromPWA=1&pwd=3zZtxF5qxusSU2zUXgWnrbgDyzXOCD.1&_x_zm_rtaid=1rmHI9L9QQKRoEhH5qDQnA.1753829984777.e17b5739b5f5cfd297d327eb1fe3b04f&_x_zm_rhtaid=434 -->
+<html lang="es-ES" data-whatinput="initial" data-whatintent="initial"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="icon" href="https://us06st1.zoom.us/zoom.ico">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="pwa">
+<link rel="manifest" href="https://app.zoom.us/wc/manifest.json" crossorigin="use-credentials">
+<title>Fullstack JS G91</title>
+<link href="./Fullstack JS G91_files/main-chunk-other.css" rel="stylesheet">
+<link href="./Fullstack JS G91_files/main.css" rel="stylesheet">
+<meta http-equiv="origin-trial" name="scope-extension" content="">
+<style>.pwa-modal__overlay{position:fixed;top:0;left:0;right:0;bottom:0;overflow:hidden}.pwa-modal__overlay--on{background:rgba(255,255,255,.75)}.pwa-modal__overlay--off{background:rgba(0,0,0,0);pointer-events:none}.pwa-modal__content{position:absolute;top:0;left:0;height:100%;width:100%;pointer-events:none;overflow:visible;background:rgba(0,0,0,0)}.pwa-modal__content--centered{display:flex;align-items:center;justify-content:center}.pwa-modal__content>*{pointer-events:visible}</style><style>:root {
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #3498db;
+  --toastify-color-success: #07bc0c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: #e74c3c;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+  --toastify-toast-width: 320px;
+  --toastify-toast-background: #fff;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: sans-serif;
+  --toastify-z-index: 9999;
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff;
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+  --toastify-color-progress-light: linear-gradient(
+    to right,
+    #4cd964,
+    #5ac8fa,
+    #007aff,
+    #34aadc,
+    #5856d6,
+    #ff2d55
+  );
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+.Toastify__toast-container {
+  z-index: var(--toastify-z-index);
+  -webkit-transform: translate3d(0, 0, var(--toastify-z-index) px);
+  position: fixed;
+  padding: 4px;
+  width: var(--toastify-toast-width);
+  box-sizing: border-box;
+  color: #fff;
+}
+.Toastify__toast-container--top-left {
+  top: 1em;
+  left: 1em;
+}
+.Toastify__toast-container--top-center {
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Toastify__toast-container--top-right {
+  top: 1em;
+  right: 1em;
+}
+.Toastify__toast-container--bottom-left {
+  bottom: 1em;
+  left: 1em;
+}
+.Toastify__toast-container--bottom-center {
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Toastify__toast-container--bottom-right {
+  bottom: 1em;
+  right: 1em;
+}
+
+@media only screen and (max-width : 480px) {
+  .Toastify__toast-container {
+    width: 100vw;
+    padding: 0;
+    left: 0;
+    margin: 0;
+  }
+  .Toastify__toast-container--top-left, .Toastify__toast-container--top-center, .Toastify__toast-container--top-right {
+    top: 0;
+    transform: translateX(0);
+  }
+  .Toastify__toast-container--bottom-left, .Toastify__toast-container--bottom-center, .Toastify__toast-container--bottom-right {
+    bottom: 0;
+    transform: translateX(0);
+  }
+  .Toastify__toast-container--rtl {
+    right: 0;
+    left: initial;
+  }
+}
+.Toastify__toast {
+  position: relative;
+  min-height: var(--toastify-toast-min-height);
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  max-height: var(--toastify-toast-max-height);
+  overflow: hidden;
+  font-family: var(--toastify-font-family);
+  cursor: pointer;
+  direction: ltr;
+}
+.Toastify__toast--rtl {
+  direction: rtl;
+}
+.Toastify__toast-body {
+  margin: auto 0;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  padding: 6px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.Toastify__toast-body > div:last-child {
+  -ms-flex: 1;
+      flex: 1;
+}
+.Toastify__toast-icon {
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+  width: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Toastify--animate {
+  animation-fill-mode: both;
+  animation-duration: 0.7s;
+}
+
+.Toastify--animate-icon {
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+}
+
+@media only screen and (max-width : 480px) {
+  .Toastify__toast {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
+.Toastify__toast-theme--dark {
+  background: var(--toastify-color-dark);
+  color: var(--toastify-text-color-dark);
+}
+.Toastify__toast-theme--light {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+.Toastify__toast-theme--colored.Toastify__toast--default {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+.Toastify__toast-theme--colored.Toastify__toast--info {
+  color: var(--toastify-text-color-info);
+  background: var(--toastify-color-info);
+}
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  color: var(--toastify-text-color-success);
+  background: var(--toastify-color-success);
+}
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+  color: var(--toastify-text-color-warning);
+  background: var(--toastify-color-warning);
+}
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  color: var(--toastify-text-color-error);
+  background: var(--toastify-color-error);
+}
+
+.Toastify__progress-bar-theme--light {
+  background: var(--toastify-color-progress-light);
+}
+.Toastify__progress-bar-theme--dark {
+  background: var(--toastify-color-progress-dark);
+}
+.Toastify__progress-bar--info {
+  background: var(--toastify-color-progress-info);
+}
+.Toastify__progress-bar--success {
+  background: var(--toastify-color-progress-success);
+}
+.Toastify__progress-bar--warning {
+  background: var(--toastify-color-progress-warning);
+}
+.Toastify__progress-bar--error {
+  background: var(--toastify-color-progress-error);
+}
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--info, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--success, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
+  background: var(--toastify-color-transparent);
+}
+
+.Toastify__close-button {
+  color: #fff;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s ease;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.Toastify__close-button--light {
+  color: #000;
+  opacity: 0.3;
+}
+.Toastify__close-button > svg {
+  fill: currentColor;
+  height: 16px;
+  width: 14px;
+}
+.Toastify__close-button:hover, .Toastify__close-button:focus {
+  opacity: 1;
+}
+
+@keyframes Toastify__trackProgress {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+.Toastify__progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: var(--toastify-z-index);
+  opacity: 0.7;
+  transform-origin: left;
+}
+.Toastify__progress-bar--animated {
+  animation: Toastify__trackProgress linear 1 forwards;
+}
+.Toastify__progress-bar--controlled {
+  transition: transform 0.2s;
+}
+.Toastify__progress-bar--rtl {
+  right: 0;
+  left: initial;
+  transform-origin: right;
+}
+
+.Toastify__spinner {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 100%;
+  border-color: var(--toastify-spinner-color-empty-area);
+  border-right-color: var(--toastify-spinner-color);
+  animation: Toastify__spin 0.65s linear infinite;
+}
+
+@keyframes Toastify__bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes Toastify__bounceOutRight {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+@keyframes Toastify__bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes Toastify__bounceOutLeft {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+@keyframes Toastify__bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+@keyframes Toastify__bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes Toastify__bounceOutDown {
+  20% {
+    transform: translate3d(0, 10px, 0);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+.Toastify__bounce-enter--top-left, .Toastify__bounce-enter--bottom-left {
+  animation-name: Toastify__bounceInLeft;
+}
+.Toastify__bounce-enter--top-right, .Toastify__bounce-enter--bottom-right {
+  animation-name: Toastify__bounceInRight;
+}
+.Toastify__bounce-enter--top-center {
+  animation-name: Toastify__bounceInDown;
+}
+.Toastify__bounce-enter--bottom-center {
+  animation-name: Toastify__bounceInUp;
+}
+
+.Toastify__bounce-exit--top-left, .Toastify__bounce-exit--bottom-left {
+  animation-name: Toastify__bounceOutLeft;
+}
+.Toastify__bounce-exit--top-right, .Toastify__bounce-exit--bottom-right {
+  animation-name: Toastify__bounceOutRight;
+}
+.Toastify__bounce-exit--top-center {
+  animation-name: Toastify__bounceOutUp;
+}
+.Toastify__bounce-exit--bottom-center {
+  animation-name: Toastify__bounceOutDown;
+}
+
+@keyframes Toastify__zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes Toastify__zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+.Toastify__zoom-enter {
+  animation-name: Toastify__zoomIn;
+}
+
+.Toastify__zoom-exit {
+  animation-name: Toastify__zoomOut;
+}
+
+@keyframes Toastify__flipIn {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+@keyframes Toastify__flipOut {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+.Toastify__flip-enter {
+  animation-name: Toastify__flipIn;
+}
+
+.Toastify__flip-exit {
+  animation-name: Toastify__flipOut;
+}
+
+@keyframes Toastify__slideInRight {
+  from {
+    transform: translate3d(110%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideInLeft {
+  from {
+    transform: translate3d(-110%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideInUp {
+  from {
+    transform: translate3d(0, 110%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideInDown {
+  from {
+    transform: translate3d(0, -110%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(110%, 0, 0);
+  }
+}
+@keyframes Toastify__slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(-110%, 0, 0);
+  }
+}
+@keyframes Toastify__slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 500px, 0);
+  }
+}
+@keyframes Toastify__slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -500px, 0);
+  }
+}
+.Toastify__slide-enter--top-left, .Toastify__slide-enter--bottom-left {
+  animation-name: Toastify__slideInLeft;
+}
+.Toastify__slide-enter--top-right, .Toastify__slide-enter--bottom-right {
+  animation-name: Toastify__slideInRight;
+}
+.Toastify__slide-enter--top-center {
+  animation-name: Toastify__slideInDown;
+}
+.Toastify__slide-enter--bottom-center {
+  animation-name: Toastify__slideInUp;
+}
+
+.Toastify__slide-exit--top-left, .Toastify__slide-exit--bottom-left {
+  animation-name: Toastify__slideOutLeft;
+}
+.Toastify__slide-exit--top-right, .Toastify__slide-exit--bottom-right {
+  animation-name: Toastify__slideOutRight;
+}
+.Toastify__slide-exit--top-center {
+  animation-name: Toastify__slideOutUp;
+}
+.Toastify__slide-exit--bottom-center {
+  animation-name: Toastify__slideOutDown;
+}
+
+@keyframes Toastify__spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}</style><style>.Toastify__toast-body{padding:2px}.Toastify__toast{border:1px solid #c1c6ce;box-sizing:border-box;box-shadow:0px 24px 48px rgba(19,22,25,.2),0px 12px 24px rgba(19,22,25,.1);backdrop-filter:blur(10px);border-radius:10px;animation-duration:10ms !important;min-height:40px}.Toastify__toast.popup-action__bottom .Toastify__close-button{align-self:flex-start}.Toastify__toast.zm-toast--display-none{display:none}.zm__toast-container{display:flex}.zm__toast-icon{padding:0px 15px 0px 6px;display:flex;align-items:center;font-size:24px}.zm__toast-title{font-weight:bold;color:#131619;margin-bottom:4px}.zm__toast-content{display:flex;font-size:14px;line-height:20px;flex-direction:column;justify-content:center;flex-grow:1}.zm__toast-desc{color:#131619;margin-bottom:4px}.zm__toast-desc--no-bottom{margin-bottom:0px}.zm-toast--visibility-hidden{position:absolute;opacity:0;width:0;visibility:hidden;height:0}.zm-toast--visibility-hidden .Toastify__progress-bar{animation-play-state:paused !important}.zm__toast-main-container .hideMe{position:absolute;opacity:0;visibility:hidden;width:0;height:0}.zm__toast-main-container .hideMe .Toastify__progress-bar{animation-play-state:paused !important}.zm__toast-icon-type{display:flex}.zm__toast-icon-type.icon-type__success{color:#268543}.zm__toast-icon-type.icon-type__info{color:#0e72ed}.zm__toast-icon-type.icon-type__warn{color:#b36200}.zm__toast-icon-type.icon-type__failure{color:#e8173d}.Toastify__close-button{margin-right:8px;align-self:center;color:#131619;opacity:1}.Toastify__close-button>svg{height:14px;width:14px}.Toastify__close-button>svg:hover{opacity:.8}.back-meetings{cursor:pointer;color:#0956b5;font-size:14px;line-height:20px}.back-meetings:hover{color:rgba(9,86,181,.8)}.popup-actions__buttons{display:flex;justify-content:space-between;align-items:center;min-width:128px;margin-right:20px}.popup-actions__buttons>button{flex-grow:1}.popup-actions__buttons>button:last-of-type{margin-left:8px}.popup-action__bottom .Toastify__close-button>svg{position:absolute;top:11px;right:21px}.popup-action__bottom .popup-actions__buttons{margin-right:0}.Toastify__toast-container{top:50px}</style><style type="text/css">
+micro-app, micro-app-body { display: block; } 
+micro-app-head { display: none; }</style></head>
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"><div class="pwa"></div><div class="pwa-webclient" style="z-index: 30000; width: 100%; height: 100%; top: 0px; left: 0px;"><div class="pwa-webclient__iframe-wrapper"><iframe class="pwa-webclient__iframe" id="webclient" src="./Fullstack JS G91_files/81735350439.html" role="presentation"></iframe></div></div><div class="modal-container"></div><div class="Toastify" id="zm_ToastContainerID"></div></div>
+<input type="hidden" id="detect" value="https://us06st2.zoom.us/cdn-detect.png">
+<script nonce="">
+// common captcha setting
+var routingUrl="t_x_zm_rid=1"
+var hCaptchaSiteKey="df6242b3-aef1-4156-bf8e-c5f258d9e602"
+var gRecaptchaVisible="6LdZ7KgaAAAAACd71H_lz76FwfcJpc4OQ1J7MDWA";
+var gRecaptchaInvisible="6Lf2C54aAAAAAOOpnJT1sg39rowHN362Zj2QSyls";
+var cfRecaptchaCheckboxSiteKey="0x4AAAAAAAZQvKXdvahp4tEM";
+var cfRecaptchaInvisibleSiteKey="0x4AAAAAAAZQvcBUTC_uhZW5";
+var canSkipCaptcha= false || false
+var isGrecaptchaEnt= true || false
+var isCN = false;
+var isSupportGoogleCaptcha = true;
+var isSupportGoogleCaptchaForCN = true || false
+var isSupportHcaptcha = false;
+var isSupportCfCaptcha = false;
+var isSmartCaptcha = true; // default
+var isHcaptcha = false; // default
+var isCfCaptcha = false // default
+if (canSkipCaptcha){
+isSmartCaptcha = true;
+isHcaptcha = false;
+} else if (isSupportGoogleCaptcha) {
+// google captcha
+if (!isCN || isSupportGoogleCaptchaForCN) {
+isSmartCaptcha = false;
+isHcaptcha = false;
+}
+} else if(isSupportCfCaptcha) {
+// cloudflare turnstile captcha
+isSmartCaptcha = false;
+isCfCaptcha = true;
+} else if (isSupportHcaptcha){
+// hcaptcha
+isSmartCaptcha = false;
+isHcaptcha = true;
+} else {
+// smart captcha
+isSmartCaptcha = true;
+isHcaptcha = false;
+}
+// common setting for front-end project
+var clock_out_path = '/clockout';
+</script>
+<script nonce="">
+var cookieLang = readCookie("_zm_lang");
+if (cookieLang == "" || cookieLang == null) {
+createCookie("_zm_lang", "es-ES", 365);
+}
+ready(function () {
+var isCDNblocked = readCookie("_zm_cdn_blocked");
+var blk = "unlog_blk";
+var unblk = "unlog_unblk";
+if (isCDNblocked === null || (isCDNblocked !== blk && isCDNblocked !== unblk)) {
+var image = new Image();
+delCookie("_zm_cdn_blocked");
+var timer = setTimeout(function () {
+image.onload = null;
+createCookie("_zm_cdn_blocked", blk, 0.25);
+window.location.reload(true);
+}, 10000);
+image.onload = function () {
+clearTimeout(timer);
+createCookie("_zm_cdn_blocked", unblk, 0.25);
+};
+image.onerror = function () {
+clearTimeout(timer);
+createCookie("_zm_cdn_blocked", blk, 0.25);
+window.location.reload(true);
+};
+var url = document.getElementById("detect").value;
+image.src = url;
+}
+});
+function ready(callback) {
+if (document.readyState !== 'loading') callback();
+else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+else document.attachEvent('onreadystatechange', function () {
+if (document.readyState === 'complete') callback();
+});
+}
+function createCookie(name, value, days) {
+if (days) {
+var date = new Date();
+date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+var expires = "; expires=" + date.toUTCString();
+}
+else var expires = "";
+document.cookie = name + "=" + value + expires + "; path=/; secure=true; domain=" + "zoom.us";
+}
+function readCookie(name) {
+var equal = name + "=";
+var ca = document.cookie.split(';');
+for (var i = 0; i < ca.length; i++) {
+var c = ca[i];
+while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+if (c.indexOf(equal) == 0) return c.substring(equal.length, c.length);
+}
+return null;
+}
+function delCookie(name) {
+createCookie(name,"",-1);
+}
+</script>
+<script nonce="" type="text/javascript">
+var config = function(){
+var config = {};
+config.cdnPath = "https://us06st1.zoom.us/web_client_pwa/1.11.0.2642";
+config.aicPlusHomeUrl = "https://st1.zoom.us/fe-static/aic-plus/index-5.1.9132.html";
+config.isCustUser = false;
+config.supportLanguages = {"en-US":"English","es-ES":"Español","de-DE":"Deutsch","zh-CN":"简体中文","zh-TW":"繁體中文","fr-FR":"Français","pt-PT":"Português","jp-JP":"日本語","ru-RU":"Русский","ko-KO":"한국어","it-IT":"Italiano","vi-VN":"Tiếng Việt","pl-PL":"Polski","tr-TR":"Türkçe","id-ID":"Bahasa Indonesia","nl-NL":"Nederlands","sv-SE":"Svenska"};
+config.isNoMeetingsLicenseTypeUser = false;
+config.uid = "";
+config.copyrightYear = 2025;
+config.isShowWhiteboard = false;
+config.isGovEnv = false;
+config.wc_hash = "11c256833ca246e582cd2ec572df4a01";
+config.previewOptions = 1;
+config.serverDomain = {"asyncDomain":"async.zoom.us","xmppApiDomain":"https://imapi.zoom.us","fileImageServerDomain":"us06file-ia.zoom.us","asyncImDomain":"asyncim.zoom.us","fileServerDomain":"us06file.zoom.us","pnsDomain":"wss://us06zpns.zoom.us/ws","xmppWsDomain":"xmppwss.zoom.us","nwsDomain":"https://us06nws.zoom.us","mpApiUrl":"https://mpapis.zoom.us/","webDomain":"us06web.zoom.us","integrationDomain":"https://applications.zoom.us","microServiceDomain":"xmppapi.zoom.us","xmppDomain":"xmpp013.zoom.us"};
+config.pwaClientFeatureOptions = "1111011110";
+config.enableTeslaNameOrder = true;
+config.userOptions = {"options6":"0"};
+config.pwaDataStorationEncryptedKeys = [{"isCurrent":true,"stage":"CURRENT","value":"18428076daf184024013f767ca565e094b435dc3250171c15b661773dabc223c","version":"000002"}];
+config.enableTeamChatUrl=true;
+config.logConfig = "";
+config.isEnablePWAZCCIntegration = false;
+config.disableRedirect = true;
+config.domain = "https://app.zoom.us";
+config.enableMeetingRoute = true;
+config.snsType = -1;
+config.docsDomain = "";
+config.driveDomain = "";
+config.enableDocs = false;
+config.enableDrive = false;
+config.mergeMeetingAndCalendar = false;
+config.isPMIHostVideoOn = false;
+config.enableAlwaysUsePMIInstant = false;
+config.lockAlwaysUsePMIInstant = false;
+config.enableUserPMISetting = false;
+config.isOpLogIn = false;
+config.IsDisableInternalPresence = false;
+config.isSupportOneCharPersonalLink = false;
+config.enableUserManualOverridePresence = false;
+config.aiCompanionWorkplace = false;
+config.aiCompanionWorkplaceLock = false;
+config.newChatSwitchEnabled = false;
+return config;
+};
+var chatInitConfig = {"chatEntryUrl":"https://app.zoom.us/chat?integrate=true","isChatEnabled":false,"chatCdnCommonLibPath":"https://st1.zoom.us/fe-static/pwa_chat/0.1.0.2733","teamChatEntryUrl":"https://app.zoom.us/team-chat?integrate=true","chatCdnPath":"https://st1.zoom.us/fe-static/pwa_chat/0.1.0.4015"};
+</script>
+<script nonce="" type="text/javascript">
+var vbPath = "https://us06st1.zoom.us/web-media/df9pjuf/vb-resource";
+</script>
+<script nonce="" type="text/javascript" src="./Fullstack JS G91_files/vbPreload.js.descargar"></script>
+<script nonce="" type="text/javascript">
+var langResource ={
+"pwa.view_more":"Ver más",
+"pwa.image_attachment":"Imagen",
+"pwa_voicemail_text":"Mensaje de voz",
+"pwa.chat_popover_title":"Ya está disponible Chat en equipo.",
+"pwa.bots":"Bots",
+"pwa.back_to_meeting_1":"Volver a la reunión",
+"pwa.company.contacts":"Contactos empresariales",
+"pwa.delete_contact_success":"Contacto {0} eliminado correctamente",
+"pwa.cci_notification_always_play":"Reproducir siempre las notificaciones",
+"pwa.lines_text":"Líneas",
+"pwa.settings_rose_theme":"Rosa",
+"pwa.contacts_no_result":"No hay resultados",
+"apac.settings.hold_space":"Presione y mantenga presionada la tecla ESPACIO para reactivar su audio temporalmente",
+"pwa.phone.hold_button":"Mantener en espera",
+"pwa.meetings.not_zoom_meeting":"Esta no es una reunión de Zoom",
+"pwa.drive.warning":"La distracción al conducir puede provocar accidentes que tengan como consecuencia lesiones graves o la muerte. Preste atención a las condiciones del tráfico y respete la legislación local. Si usted es el anfitrión de una reunión, considere la posibilidad de designar a un coanfitrión.",
+"pwa.meet_with_video_l":"Reunirse con vídeo",
+"pwa.phone.audio_button":"Audio",
+"pwa.signout_revoke_token":"Su sesión ha terminado y debe ingresar de nuevo",
+"pwa.overall":"General",
+"pwa.chat.post_meeting_notice_title":"Continuar donde lo dejó",
+"pwa.want_delete_contact":"Quiere eliminar {0}",
+"pwa.To":"A",
+"pwa.phone.stop_recording":"Detener grabación",
+"pwa.from":"Desde",
+"pwa.complete_upgrade":"Completar invitación a reunión",
+"pwa.hours":"{0} horas",
+"pwa.default_address_type_hint":"Zoom informará de su dirección de emergencia predeterminada durante una llamada de emergencia",
+"pwa.add_location_desc":"Añadir una dirección de emergencia para informar su ubicación cuando realice una llamada de emergencia",
+"pwa.phone.micro_start_test":"Probar micrófono",
+"pwa.someone_is_inviting_to_meeting":"{0} le está invitando a una reunión...",
+"pwa.settings_reset_to_default":"Restablecer a valor predeterminado",
+"pwa.minutes":"{0} minutos",
+"pwa.phone.cancel_transfer":"Cancelar transferencia",
+"apac.settings.output_level":"Nivel de salida",
+"pwa.phone_all_messages":"Todos los mensajes",
+"pwa.header_tabs_pinned_drag_text":"Arrastre los elementos aquí para añadirlos a la barra de herramientas",
+"pwa.address_type_detected":"Detectado",
+"pwa.not_selected":"No seleccionado",
+"pwa.call_missed_call":"Llamada perdida",
+"pwa.contact.email_address":"Dirección de correo electrónico",
+"pwa.history_text_all":"Todo el historial",
+"pwa.leave_meeting_accept":"Salir de la reunión y aceptar",
+"pwa.video_call":"Llamada de vídeo",
+"pwa.phone.admin_disable_auto_record":"El administrador activó la grabación automática de las llamadas",
+"pwa.settings_navigation":"Navegación",
+"pwa.phone.both_calling_sms_disabled":"Su administrador ha deshabilitado las llamadas y los SMS/MMS de Zoom Phone.",
+"pwa.otp_time":"Hora",
+"pwa.presence._on_call_with":"En una llamada con {0}",
+"pwa.meetings.delete_modal_content_recent":"Eliminado recientemente",
+"pwa.unable_play_encrypted_voicemail":"No es posible reproducir correos de voz cifrados. Utilice su aplicación de escritorio o móvil para reproducir correos de voz.",
+"pwa.contacts_email":"Correo electrónico",
+"pwa.phone.connecting":"Conectando",
+"pwa.phone.upgrade.title":"Conéctese al mundo con Zoom Phone",
+"pwa.phone.record_button":"Grabar",
+"pwa.more":"más",
+"pwa.thank_you_for_joining_text":"Gracias por asistir al {0}",
+"pwa.drive_hub":"Drive",
+"pwa.nav_audio":"Audio",
+"pwa.home_phone":"Teléfono del domicilio",
+"pwa.schedule":"Programar",
+"pwa.hide_information":"Ocultar información",
+"pwa.chat_popover_content_1":"Puede enviar y recibir mensajes directos y chatear en canales.",
+"pwa.chat":"Chat",
+"pwa.cci_notification_always_play_desc":"Reproduzca las notificaciones de sonido para todos los mensajes no leídos.",
+"pwa.no_answer":"Sin respuesta",
+"pwa.phone.not_connected":"No conectado. Intentando volver a conectar...",
+"pwa.promote.to.panelist":"Al anfitrión le gustaría ascenderle a panelista",
+"pwa.to_you":"para usted",
+"pwa.removed_by_host":"El anfitrión lo ha eliminado de esta reunión",
+"pwa.send_one_img_once":"Solo puede enviar una imagen cada vez",
+"pwa.phone_register_id":"ID de registro",
+"pwa.my_profile":"Mi perfil",
+"pwa.phone.message.does.not.exist":"El mensaje no existe",
+"pwa.call_failed":"Error en la llamada",
+"pwa.header_tabs_add_pinned":"Anclar a la barra de herramientas",
+"pwa.external":"Externo",
+"pwa.otp_operating_system":"SO",
+"apac.settings.sending_video":"Enviando vídeo",
+"pwa.today":"Hoy",
+"pwa.meet_without_video":"Reunirse sin vídeo",
+"pwa.is_inviting_to_meeting":"le está invitando a una reunión...",
+"pwa.settings_global_nav_notice":"Los elementos se añaden a la barra de herramientas cuando se accede a ellos",
+"pwa.e911_addr_updated":"Dirección de emergencia actualizada",
+"pwa.meetings.transfer.failed.title":"No es posible unirse a esta reunión",
+"pwa.cci_notification_setting":"Notificaciones de mensajes del centro de contacto:",
+"pwa.poll_inbox":"Tiene una votación de la reunión",
+"pwa.phone.block.number.spam":"Mensajes no deseados",
+"apac.settings.use_hardware_acceleration":"Utilice la aceleración de hardware para:",
+"pwa.mobile_phone":"Teléfono móvil",
+"pwa.meetings.not_zoom_meeting_1":"Esta no es una reunión de Zoom",
+"pwa.send":"Enviar",
+"pwa.phone.park":"Detener",
+"pwa.contacts_presence_mobile":"Móvil",
+"pwa.phone.no_direct_number":"No tiene un número directo. No puede iniciar una nueva conversación.",
+"pwa.phone.reply":"Responder",
+"pwa.transfer_to_you":"Transferir a usted",
+"pwa.language":"Idioma",
+"pwa.giveFeedback_btn_text":"Dejar comentarios…",
+"pwa.phone.check.number":"Su mensaje tiene destinatarios no válidos, compruebe el número.",
+"pwa.feedback_technical_support_text":"Para obtener asistencia técnica, visite <a href={0}>Soporte</a>.",
+"pwa.meetings.webinar_id":"ID del seminario web",
+"pwa.meetings.transfer.switch":"Cambiar",
+"pwa.click_to_dial_information":"Al habilitar esta opción, podrá marcar un número de teléfono en un navegador web haciendo clic en él.",
+"pwa.phone.message.failed.notification":"No se pudo enviar el mensaje",
+"pwa.leave_join_new_meeting":"¿Desea salir de la reunión actual y unirse a una nueva?",
+"pwa.chat.post_meeting_notice":"Los mensajes enviados durante {0} aparecerán ahora en Chat en equipo bajo un chat de grupo con el mismo nombre",
+"pwa.meetings_delete_meeting":"Eliminar reunión",
+"pwa.phone.complete_transfer":"Completar transferencia",
+"pwa.phone.pause_button":"Pausar",
+"pwa.bo_will_close":"Las salas para grupos pequeños se cerrarán pronto. Volverá a la sesión principal automáticamente.",
+"pwa.phone.setup.title":"Configure su teléfono ahora",
+"pwa.phone.caller_id":"ID del llamador",
+"pwa.sign_out_button":"Cerrar sesión",
+"pwa.no_inbox_seleted":"No se ha seleccionado un buzón de entrada",
+"apac.settings.stop":"Detener",
+"pwa.more_info_files_empty":"Los archivos compartidos en esta conversación aparecerán aquí",
+"pwa.contact_items_index":"{0} de {1}",
+"pwa.nav_phone":"Teléfono",
+"pwa.meetings.outlook_private":"Cita privada",
+"pwa.xmpp_logout_text":"Actualmente, tiene la sesión iniciada en su cuenta de Zoom en otra pestaña del navegador o dispositivo.",
+"pwa.packet_loss":"Pérdida de paquetes - media (máx.)",
+"pwa.phone.emergency_call":"Llamada de emergencia",
+"pwa.chat_popover_content":"Puede enviar y recibir mensajes directos y chatear en canales.",
+"pwa.phone.blind_transfer":"Transferencia directa",
+"pwa.phone.failed.to.load.transcript":"No se ha podido cargar la transcripción",
+"pwa.phone_direct_number":"Número directo",
+"pwa.phone.push_notification":"Notificaciones automáticas",
+"pwa.terms_of_service":"Al hacer clic en \"Unirse\" está aceptando nuestros Términos del servicio y nuestra Declaración de privacidad",
+"pwa.accepted_by_for":"Aceptado por {0} para {1}",
+"pwa.contacts_department":"Departamento",
+"pwa.meetings.empty_tips":"Conectar con el calendario o programar una reunión",
+"pwa.phone.failed.message.delete":"Este mensaje se quitará para usted. Otros destinatarios aún podrán verlo. ¿Seguro que desea eliminar el mensaje?",
+"pwa.phone.support.btn":"Más información sobre la configuración",
+"pwa.otp_change_password":"Cambie su contraseña",
+"pwa.phone.message.retry":"Volver a intentar",
+"pwa.phone.conference_left":"{0} abandonó la llamada",
+"pwa.show_less":"Mostrar menos",
+"pwa.contacts_presence_available":"Disponible",
+"pwa.phone.ext":"Ext.",
+"pwa.phone.warm_transfer_desc2":"Hablar con el nuevo usuario antes de transferir",
+"pwa.close":"cerrar",
+"pwa.phone.number_pad_type_add_call":"Añadir llamada",
+"pwa.phone.transfer_to_vm":"Transferir a correo de voz",
+"pwa.about_open_source":"Software de código abierto",
+"pwa.help":"Ayuda",
+"apac.settigns.speaker_tip":"Haga clic en Probar altavoz para asegurarse de que puede oír a los demás",
+"pwa.meeting_ended_by_host":"El anfitrión ha finalizado la reunión",
+"pwa.video":"Vídeo",
+"pwa.unmute_request":"Al anfitrión le gustaría que usted hablase",
+"pwa.connect_status_not_connected":"No conectado",
+"pwa.ok":"Aceptar",
+"pwa.contacts_in_zoom_meeting":"En una reunión de Zoom",
+"pwa.phone.unhold_button":"Reanudar",
+"pwa.delete":"Eliminar",
+"pwa.phone.invalid.recipient":"Destinatario no válido",
+"pwa.about_this_conversation":"Acerca de esta conversación",
+"pwa.phone_extension":"Extensión",
+"pwa.phone_admin_no_direct_number":"Su administrador ha eliminado su número directo. No puede enviar mensajes.",
+"apac.same_as_system":"Igual que el sistema",
+"pwa.callers":"Llamadores",
+"pwa.meetings.meeting_id":"ID de reunión",
+"pwa.poll_result_shared":"El anfitrión ha compartido los resultados de la votación",
+"pwa.transfer_err":"Error de transferencia",
+"pwa.contact.start_chat":"Iniciar chat",
+"pwa.invite_to_meeting":"Invitar a una reunión",
+"pwa.phone.conference_joined":"{0} se unió a la llamada",
+"pwa.about_zoom":"Acerca de Zoom",
+"pwa.loading_e911_addr":"Cargando dirección de emergencia...",
+"pwa._notification_invite_me":"{0} desea añadirle como contacto",
+"pwa.missed_from":"Perdida de {0}",
+"apac.settings.auto_join_audio":"Entrar automáticamente con audio por el equipo al entrar en una reunión",
+"pwa.service.and.privacy":"Términos del servicio y Declaración de privacidad de Zoom",
+"pwa.facebook_messenger":"Facebook Messenger",
+"pwa.feedback_score_question":"¿Cuál es su grado de satisfacción con su experiencia?",
+"pwa.otp_two_auth":"Si no ha sido usted, le recomendamos que actualice su contraseña y habilite la autenticación de dos factores para proteger su cuenta.",
+"pwa.phone_num":"Número de teléfono",
+"pwa.hold_meeting_audio_and_anwser":"Poner en espera el audio de la reunión y responder",
+"pwa.create_a_p_c":"Crear un contacto personal",
+"pwa.contact_center":"Centro de contacto",
+"pwa.contact.invite_send_success":"Se ha enviado una invitación a {0}",
+"pwa.phone.to":"a",
+"apac.settings.sync_headset":"Sincronizar botones en los auriculares",
+"pwa.number_home":"Domicilio",
+"pwa.cci_notification_always_mute_desc":"Silencie las notificaciones de sonido para todos los mensajes no leídos.",
+"pwa.meetings.now":"AHORA",
+"apac.settings.microphone":"Micrófono",
+"pwa.volume":"Volumen",
+"pwa.phone.rec":"GRB",
+"pwa.meetings":"Reuniones",
+"pwa.others":"otros",
+"pwa.phone.speaker_start_test":"Probar altavoz",
+"pwa_muted_by_host":"El anfitrión le ha silenciado",
+"pwa.invite_to_bo":"{0} lo invita a unirse a la sala para grupos pequeños {1}",
+"apac.settings.recording":"Grabación",
+"pwa.phone.transfer_to_vm_desc":"Transferir directamente al correo de voz del nuevo usuario",
+"pwa.confirm_emergency_address":"Es esta su ubicación actual en el caso de una llamada de emergencia",
+"pwa.choose_lang":"Seleccionar idioma",
+"pwa.more_options":"Más opciones",
+"pwa.me":"Mí",
+"pwa.phone.record_failed":"Error al grabar: {0}",
+"pwa.view":"Ver",
+"pwa.private":"Privado",
+"pwa.is_inviting_you":"le está invitando a una reunión...",
+"apac.settings.input_level":"Nivel de entrada",
+"pwa.contact_level":"nivel {0}",
+"pwa.phone_delete":"Eliminar",
+"pwa.for":"Para {0}",
+"pwa.cci_notification_always_mute":"Silenciar siempre las notificaciones",
+"pwa.local_dialing":"Marcación local",
+"pwa.zcc.banner_text":"Centro de contacto: {0}",
+"pwa.meetings.view_today_upcoming":"Ver las reuniones próximas de hoy",
+"pwa.leave_current_to_join_new":"Tendrá que salir de esta reunión para unirse a la nueva reunión",
+"pwa.contacts_job_title":"Cargo",
+"pwa.return_to_meeting":"Volver a la reunión",
+"pwa.contact_add_camera_control_modal_title":"Añadir {0} a grupo de control de cámara",
+"pwa.phone.transfer_button":"Transferir",
+"pwa.skip_reason":"Motivo de omisión",
+"pwa.incoming_call":"Llamada entrante",
+"pwa.settings_bloom_theme":"Primavera",
+"pwa.remote_ip_and_port":"IP y puerto remotos",
+"pwa.phone.chat.footer.text_to_sb":"Texto {0}...",
+"pwa.phone.failed.to.chats":"No se han podido cargar chats",
+"pwa.settings_agave_theme":"Agave",
+"pwa.contact.already_contact":"{0} ya es un contacto",
+"pwa.phone.chat.footer":"Mensaje de texto...",
+"pwa.phone_network_interface":"Interfaz de red local",
+"pwa.header_tabs_more_drag_text":"Arrastre los elementos aquí para quitarlos de la barra de herramientas",
+"pwa.create_p_c":"Crear contacto personal",
+"pwa.comy_org_name":"Nombre de la empresa/organización",
+"pwa.phone.delete.conversation":"Borrar conversación",
+"pwa.contact_remove_camera_control_group":"Quitar del grupo de control de cámara",
+"pwa.phone.mute_button":"Silenciar",
+"pwa.whiteboards":"Pizarras",
+"pwa.contacts_no_contact_selected":"Vea la información del contacto haciendo clic en un contacto en el panel izquierdo",
+"pwa.all.contact":"Todos los contactos",
+"pwa.delete_contact":"Eliminar contacto",
+"pwa.phone_voicemail_list":"Lista de correo de voz",
+"pwa.sign_session_will_expire":"Su sesión caducará en {0}.",
+"pwa.phone.support.title":"Usar el teléfono en la aplicación Zoom Web",
+"apac.settings.receiving_video":"Recibiendo vídeo",
+"pwa.meeitngs.hosted_by":"reunión celebrada por",
+"pwa.microphone":"Micrófono",
+"pwa.inboxes":"Buzones de entrada",
+"pwa.cloud_recording_exceed_limit_admin":"La grabación en la nube se ha deshabilitado porque su cuenta ha utilizado todo el espacio de almacenamiento disponible en la nube.",
+"pwa.phone.open_keypad":"Abrir teclado",
+"pwa.meetings.hide_invitation":"Ocultar la invitación de la reunión",
+"pwa.create_p_c_ok":"Contacto {0} creado correctamente",
+"pwa.call":"Llamada",
+"pwa.output_level":"Nivel de salida",
+"pwa_history_text":"Historial",
+"pwa.phone.something.went.wrong":"Algo salió mal",
+"pwa.phone.failed.to.load":"No se ha podido cargar la transcripción",
+"pwa.update_e911_address":"Error, actualícelo",
+"pwa.phone.upgrade.desc":"Zoom Phone es un sistema de telefonía en la nube con numerosas funciones para empresas de todos los tamaños. Actualizar para empezar a usar Zoom Phone",
+"pwa.upugrade.merge":"Añadir al llamador a la reunión actual",
+"pwa.sync_buttons_on_headset":"Sincronizar botones en los auriculares",
+"pwa.phone.new.sms":"Nuevo SMS",
+"pwa.phone.to_upper_colon":"Para:",
+"pwa.transfer_from_to":"Transferir de {0} a {1}",
+"pwa.bandwidth":"Ancho de banda",
+"pwa.use_pmi":"Utilizar mi ID personal de la reunión (PMI)",
+"pwa.leave_and_join":"Salir y unirse",
+"pwa.phone.draft":"[Borrador]",
+"pwa.everyone":"Todos",
+"pwa.outgoing_by":"Llamada saliente por {0}",
+"pwa.home_button":"Inicio",
+"pwa.tomorrow":"Mañana",
+"pwa.unknown_Location":"Ubicación desconocida",
+"pwa.location_permission":"Permiso de ubicación",
+"pwa.mobile_num":"Número de móvil",
+"pwa.join_new_meeting":"¿Desea unirse a una nueva reunión?",
+"pwa.transfer_succ":"Transferencia realizada correctamente",
+"pwa.phone.click_to_swap":"Haga clic para intercambiar",
+"pwa.otp_deny":"Denegar",
+"pwa.call_cancel":"Llamada cancelada",
+"pwa.contacts_dnd_lower":"No molestar",
+"pwa.join_meeting_button":"Unirse a la reunión",
+"pwa.allow":"Permitir",
+"pwa.name":"Nombre",
+"pwa.phone.keypad_button":"Teclado numérico",
+"pwa.voice_call":"Llamada de voz",
+"pwa._notification_invite_contact_declined":"{0} ha rechazado su solicitud de contacto",
+"pwa.receive_queue_calls":"Recibir llamadas de la cola",
+"pwa.meetings.no_upcoming_meetings_only":"No hay reuniones próximas",
+"pwa.ban_video_title":"Alerta de reunión",
+"pwa.bo_time_out":"Se ha acabado el tiempo para las salas para grupos pequeños",
+"pwa.inbox":"Buzón de entrada",
+"pwa.settings_classic_theme":"Clásico",
+"pwa.more_info_images_empty":"Las imágenes compartidas en esta conversación aparecerán aquí",
+"pwa.zcc_v_over_zm_p":"Si continúa y hace una llamada de vídeo, su audio se transferirá de la llamada telefónica a su llamada de vídeo.",
+"pwa.allow_acess_location":"Permitir que Zoom acceda a mi ubicación",
+"pwa.phone.sms_change_skin_tone":"Cambiar tono de piel",
+"pwa.zcc_v_over_zm_m":"Si continúa y hace una llamada de vídeo, abandonará la reunión de Zoom actual",
+"pwa.mute":"Silenciar",
+"pwa.your_name":"Su nombre",
+"pwa.phone.inputted.existing.recipient":"Ya ha introducido este destinatario.",
+"pwa.restricted":"Restringido",
+"pwa.meeting_history_item_text":"el tema es {0} y el ID es {1}",
+"apac.settings.playing":"Reproduciendo",
+"pwa.contacts_on_a_call":"En una llamada",
+"pwa.phone.open.keypad":"Abrir teclado",
+"pwa.phone.transfer_to_starred":"Transferir a destacados",
+"pwa.copy_pmi_id":"Copiar ID",
+"pwa.signout_conflict":"Actualmente, tiene la sesión iniciada en su cuenta de Zoom en otra pestaña del navegador o dispositivo.",
+"pwa.phone_domain":"Registrar servidor",
+"pwa.meetings.show_invitation":"Mostrar la invitación de la reunión",
+"pwa.file_attachment":"Archivo",
+"pwa.feedback_prefilled_text":"Gracias por sus ideas, comentarios y sugerencias.",
+"pwa.contact_add_camera_control_group":"Añadir a grupo de control de cámara",
+"pwa.view_details":"Ver detalles",
+"pwa.park_desc":"Poner la llamada en espera para que otro usuario la atienda",
+"pwa.phone.preparing":"Preparando",
+"pwa.otp_location":"Ubicación",
+"pwa.receive_calls":"Recibir llamadas",
+"pwa.phone.sms.loading":"Cargando...",
+"pwa.contact.enter_one_email":"Solo puede añadir un contacto a la vez",
+"pwa.phone.park_call_failed":"Error al detener la llamada. Por favor inténtelo de nuevo más tarde",
+"apac.settings.turnoff_video_when_join":"Desactivar mi vídeo al unirse a una reunión",
+"pwa.docs":"Documentos",
+"pwa.phone.click_to_dial_send_message":"Enviar SMS",
+"pwa.meetings.delete_modal_content2":"página del portal web de Zoom",
+"pwa.meetings.delete_modal_content1":"Puede recuperar esta reunión en los 7 días posteriores desde el",
+"pwa.hide_keypad":"Ocultar teclado",
+"pwa.version":"Versión:",
+"pwa.re_auth_calendar":"Su calendario no está conectado. Esto podría ocurrir cuando ha cambiado su contraseña o debe autenticarse de nuevo.",
+"pwa.click_to_see_all":"Haga clic para verlo todo",
+"pwa.cloud_recording_exceed_limit":"La grabación en la nube se ha deshabilitado. Póngase en contacto con el administrador de su cuenta para obtener más información",
+"pwa.copy_invitation":"Copiar invitación",
+"pwa.more_info_images_text":"Imágenes",
+"pwa.e911_call_unavailable":"Las llamadas de emergencia no están disponibles",
+"pwa.nav_chat":"Chat en equipo",
+"pwa.config_calendar":"Modificar su configuración",
+"pwa.contact_can_not_add_self":"No se puede añadirse a sí mismo como contacto",
+"pwa.announcement":"pwa.announcement",
+"pwa.contacts_company":"Compañía",
+"pwa.emergency_address":"Dirección de emergencia",
+"pwa.click_to_dial_invalid_phone_number":"El número de teléfono que seleccionó no es válido.",
+"pwa.ban_unmute_audio":"El anfitrión no permite que los participantes reactiven su audio ellos mismos",
+"pwa.contacts_presence_presenting":"Presentando",
+"pwa.play_button_disabled":"Reproducir",
+"pwa.hide_call_while_meeting":"Ocultar llamadas entrantes durante las reuniones",
+"pwa.show_information":"Mostrar información",
+"pwa.new":"Nueva",
+"pwa.search_starred_contacts":"Buscar contactos destacados",
+"pwa.meetings.delete_modal_prefix":"Esta reunión está programada para {0}",
+"pwa.contacts_calendar_event":"En un evento de calendario",
+"pwa.contact.enter_email_address":"Introduzca la dirección de correo electrónico",
+"pwa.error.contact_us":"Se ha producido un error. Actualice o, si el error persiste, <a href={0}>póngase en contacto con nosotros</a> para obtener ayuda.",
+"pwa.meeting_passcode":"Código de acceso de la reunión",
+"pwa.phone.blind_transfer_desc":"Transferir sin dirigirse al nuevo agente",
+"pwa.phone.same_as_system":"Igual que el sistema",
+"pwa.caller_addr":"Dirección {0} del llamador",
+"pwa.about_button":"Acerca de",
+"pwa.start_with_video":"Comenzar con un vídeo",
+"pwa.click.to.agree":"Al hacer clic en \"Unirse\", acepta",
+"pwa.meetings.transfer.failed.confirm":"Aceptar",
+"pwa.phone.too.many.recipients":"Demasiados destinatarios",
+"pwa.forced_break_special_offer":"OFERTA ESPECIAL",
+"pwa.live_transcription_enabled":"Se ha habilitado la transcripción en directo (subtítulos)",
+"pwa.direct_number":"Número directo",
+"pwa.phone.play_voicemail_button":"Reproducir correo de voz",
+"pwa.phone.calling":"Llamando",
+"pwa.in_progress":"En curso",
+"pwa.call_queue.from_text":"De:",
+"pwa.contacts_loading":"Cargando",
+"pwa.office_num":"Número de la oficina",
+"pwa.phone.park_at":"Detener en: {0}",
+"pwa.phone.call_ended":"Llamada finalizada",
+"pwa.phone.end_accept":"Finalizar y aceptar",
+"pwa.zoom.rooms":"Zoom Rooms",
+"pwa.edit":"Editar",
+"pwa.allow_access_location_title":"Permitir que Zoom acceda a su ubicación",
+"pwa.connect_status_connecting":"conectando",
+"pwa.address_type_default":"Predeterminado",
+"pwa.tesla.driving_msg":"La distracción al conducir puede provocar accidentes que tengan como consecuencia lesiones graves o la muerte. Preste atención a su entorno y a las condiciones del tráfico, y respete la legislación local. Si usted es el anfitrión de una reunión, considere la posibilidad de designar a un coanfitrión.",
+"pwa.meetings.google_calendar_private":"Ocupado",
+"pwa.add_e911_address":"Añadir dirección de emergencia",
+"pwa.contacts_search":"Buscar",
+"pwa.hold_accept":"Mantener en espera y aceptar",
+"pwa.phone.blind_transfer_desc2":"Transferir sin hablar con el nuevo usuario",
+"pwa.join_meeting":"Unirse a la reunión",
+"pwa.contacts_presence_away":"Alejado",
+"pwa.contacts_presence_offline":"Fuera de línea",
+"pwa.contacts_search_bar":"Buscar",
+"pwa.meetings.my_pmi":"Mi ID personal de la reunión (PMI)",
+"pwa.phone.blind_transfer2":"Transferencia directa",
+"pwa.missed_for":"Perdida para {0}",
+"pwa.host":"Anfitrión",
+"pwa.phone.speaker_list_empty":"No se ha encontrado ningún dispositivo de altavoz",
+"pwa.phone.max.recipients":"Solo puede enviar mensajes SMS a un máximo de 10 destinatarios.",
+"pwa.phone.release":"Liberar",
+"pwa.meet_without_video_l":"Reunirse sin vídeo",
+"pwa.meetings.add_calendar":"Añadir un calendario",
+"pwa.phone.message.copy":"Copiar texto",
+"pwa.phone.can_not_change_mocro_now":"No se puede cambiar de micrófono en este momento",
+"pwa.phone.block.number.other":"Otros motivos",
+"pwa.otp_notification":"Se ha iniciado sesión con su cuenta de Zoom en otro dispositivo.",
+"pwa.phone.warm_transfer_desc":"Hable con el nuevo agente antes de realizar la transferencia",
+"pwa.phone.support.desc":"Complete la configuración de Zoom Phone en la aplicación Zoom Web",
+"pwa.video_request":"El anfitrión le ha pedido que inicie su vídeo.",
+"pwa.fax_num":"Número de fax",
+"pwa.leave_current_and_join":"¿Desea salir de la reunión actual y unirse a una nueva?",
+"pwa.loading_calendar":"Cargando calendario...",
+"pwa.phone.delete.message":"Eliminar mensaje",
+"pwa.phone_text":"Teléfono",
+"pwa.have_n_notifications":"Tiene {0} notificaciones",
+"pwa.phone.number_input_placeholder":"Introducir un nombre o número...",
+"pwa.sign_in_button":"Iniciar sesión",
+"pwa.network_delay":"Retraso de la red",
+"pwa.feedback_dissatisfied":"Muy insatisfecho",
+"pwa.return_main_session":"{0} le está invitando a volver a la sesión principal.",
+"apac.settings.speaker_select_tip":"Si no puede oír el sonido de prueba, seleccione un altavoz diferente",
+"pwa._more":"Más",
+"pwa.phone.e911_call_disabled":"La llamada de emergencia está deshabilitada. Póngase en contacto con su administrador para obtener más información",
+"pwa.contacts_presence_on_a_call":"En una llamada",
+"pwa.history_text_recording":"Grabación",
+"pwa.feedback_give_feedback":"Dejar comentarios",
+"pwa.history_text_missed":"Perdidas",
+"pwa.phone.setup.btn":"Configurar",
+"pwa.meetingList.toggle":"Lista de historial de reuniones",
+"pwa.you":"usted",
+"pwa.accepted_by":"Aceptado por {0}",
+"pwa.all_day_event":"Evento de jornada completa",
+"pwa.phone.no_conversation":"No hay conversaciones",
+"pwa.invalid_number_check":"Número no válido. Compruebe el número e inténtelo de nuevo.",
+"pwa.outbound_campaign":"Campaña saliente",
+"pwa.unable_play_videomail":"Error al reproducir el mensaje de vídeo. Utilice el cliente nativo para reproducirlo.",
+"pwa.shared":"compartido",
+"pwa.can_not_access_micro":"No puede acceder al micrófono",
+"pwa.meetings.transfer.failed.desc":"Su reunión no se pudo transferir. Inténtelo de nuevo.",
+"pwa.phone.your_ext":"Su ext.",
+"pwa.contacts_presence_online":"En línea",
+"pwa.n_calls_on_hold_2":"{0} llamadas en espera",
+"pwa.contact_remove_camera_control_f":"Ha eliminado a {0} de su grupo de control de cámara",
+"pwa.hold_meeting_audio_accept":"Poner el audio de la reunión en espera y aceptar",
+"pwa.phone.setup.desc":"Complete la configuración inicial para empezar a usar Zoom Phone",
+"pwa.back_to_meeting":"Volver a la reunión",
+"pwa.phone.admin_disable_call_record":"El administrador deshabilitó la grabación de llamadas",
+"pwa.header_tabs_configure_menu":"Configurar menú",
+"pwa.blocked":"Bloqueadas",
+"pwa.phone.caller_id_2":"ID del llamador",
+"pwa.click_to_dial":"Habilitar la función Hacer clic para marcar y Hacer clic para escribir un mensaje",
+"pwa.nav_statistics":"Estadísticas",
+"pwa.save":"Guardar",
+"pwa.skip":"Omitir",
+"pwa.phone.push_notifications.all_messages":"Todos los mensajes",
+"pwa.continue":"Continuar",
+"pwa.new_meeting":"Nueva reunión",
+"pwa.sms_text":"SMS",
+"pwa.allow_access_location_desc":"Esto permite que Zoom ayude a determinar su ubicación y solo se utiliza para los fines de atención a sus llamadas de emergencia",
+"pwa.otp_change":"Cambiar contraseña",
+"pwa.zm_m_in_progress":"Tiene una reunión en curso",
+"pwa.add_emergency_address":"Añadir dirección de emergencia",
+"pwa.open_settings":"Abrir configuración",
+"pwa.loading_whiteboard":"Cargando su pizarra",
+"apac.settings.speaker":"Altavoz",
+"pwa.profile_drop_settings":"Configuración",
+"pwa.meetings.no_upcoming_meetings_today":"No hay reuniones próximas hoy",
+"pwa.join":"Unirse",
+"pwa.phone.conference_end_call":"Finalizar llamada de {0}",
+"pwa.call_duration":"Duración de la llamada:",
+"pwa.zoom_video_meeting":"Reuniones con vídeo de Zoom",
+"pwa.settings_theme_title":"Tema",
+"pwa.codec":"Códec",
+"pwa.modal_session_expire_time_content":"Su sesión caducará en {0} debido a la configuración del administrador. Puede iniciar sesión ahora para renovar su sesión.",
+"pwa.otp_do_not_change":"No cambiar",
+"pwa.live_transcription_request":"{0} solicita que se habilite la transcripción en directo para la reunión",
+"pwa.fresh_app":"Actualizar aplicación",
+"pwa.jitter":"Vibración",
+"pwa.one_is_inviting_you":"{0} le está invitando a una reunión.",
+"pwa.learn.about.phone":"Más información sobre Zoom Phone",
+"pwa.end_meeting_accept":"Finalizar la reunión y aceptar",
+"pwa.pmi_settings":"Configuración de PMI",
+"pwa.phone.text_message_button":"Enviar mensaje de texto",
+"pwa.reqiure_name":"Se requiere un nombre",
+"pwa.join_meeting_placeholder":"ID de reunión o nombre de enlace personal",
+"pwa.phone.you":"usted",
+"pwa.settings_theme_text":"Solo se aplica cuando el sistema utiliza el modo claro",
+"pwa.delete_contact_f":"No podrá ponerse en contacto con {0}. Esta acción también borrará su historial del chat con {0}.",
+"pwa.settings_pinned":"Fijado",
+"pwa.number_mobile":"Móvil",
+"pwa.chat.history":"Historial del chat",
+"pwa.header_tabs_remove_pinned":"Quitar de la barra de herramientas",
+"pwa.back_to_call":"Volver a la llamada",
+"apac.settings.test_mic":"Probar micrófono",
+"pwa.meetings.no_upcoming_meetings":"No hay reuniones próximas hoy",
+"pwa.phone.microphone":"Micrófono",
+"pwa.more_info_you":"Usted",
+"pwa.decline":"Rechazar",
+"pwa.n_calls_on_hold":"{0} LLAMADAS EN ESPERA",
+"pwa.modal_session_expire_time_subtitle":"Su sesión está a punto de caducar",
+"pwa.turn_off":"Desactivar",
+"pwa.pwa_history_text_all":"Todos",
+"pwa.stop_audio":"Detener audio",
+"pwa.waitingroom_tip_msg1":"{0} accedió a la sala de espera",
+"pwa.meetings.transfer.notify.msg":"Pulse aquí para terminar de trasladar su reunión a {0}",
+"pwa.phone.speaker":"Hablante",
+"pwa.add":"Añadir",
+"pwa.phone.conference_call":"Llamada de conferencia",
+"pwa.topnav.webapp":"Aplicación web",
+"pwa.contacts_extension":"Extensión",
+"pwa.contacts_default":"predeterminado",
+"pwa.contact.email_address_desc":"si este usuario acepta su solicitud, su información del perfil (incluido su estado) será visible a este contacto. También puede reunirse y chatear con este contacto.",
+"pwa.contact_add_camera_control_modal_content":"Si hace clic en \"Añadir\", podrán controlar la cámara de su dispositivo para todas las futuras reuniones.",
+"pwa.show_more":"Mostrar más",
+"pwa.sms_send_btn_tip":"Control + Intro para enviar",
+"pwa.phone.block.number":"Bloquear número",
+"pwa.waitingroom_tip_msg2":"{0} personas han accedido a la sala de espera",
+"pwa.chat.go_to_chat":"Ir al chat",
+"pwa.meetings.transfer.device":"En {0}",
+"pwa.callerid_block":"El bloqueo del ID de llamada no está disponible debido a sus políticas asignadas. Póngase en contacto con su administrador para obtener ayuda adicional.",
+"pwa.unmute":"Reactivar audio",
+"pwa.phone.close_button":"Cerrar",
+"pwa.phone.merge_call":"Combinar llamada",
+"pwa.contacts_presence_in_zoom_meeting":"En una reunión de Zoom",
+"pwa.contact.pengding":"Pendiente",
+"pwa.personal_location_or_addresses":"Ubicación o direcciones personales",
+"pwa.company":"Empresa",
+"pwa.calendar":"Calendario",
+"pwa.accept":"Aceptar",
+"pwa.no_contact_selected":"Vea la información del contacto haciendo clic en un contacto en el panel izquierdo",
+"pwa.cancel_button":"Cancelar",
+"pwa.contacts_presence_busy":"Ocupado",
+"pwa.otp_browser":"Navegador",
+"pwa.ban_video_desc":"No puede iniciar su vídeo porque el anfitrión lo ha detenido",
+"pwa.star_this_contact":"Destacar este contacto",
+"pwa.items_index":"{0} de {1}",
+"pwa.phone.call_button":"Llamada",
+"pwa.merge":"Combinar",
+"apac.settings.mic_select_tip":"Si no puede escuchar su voz, seleccione un micrófono diferente",
+"pwa.warnings.number_does_not_exist":"el número no existe",
+"pwa.feedback_response_toast":"¡Gracias por sus comentarios!",
+"apac.meeting_hide_non_video":"Ocultar participantes sin vídeo",
+"pwa.feedback_text":"Comentarios",
+"pwa.recurring":"Recurrente",
+"pwa.open_settings_desc":"Para permitir a ZOOM acceder a su ubicación actual cuando haga una llamada de emergencia, habilite la configuración de Servicio de ubicación.",
+"pwa.phone.add_call_button":"Añadir llamada",
+"pwa.play_audio":"Reproducir audio",
+"pwa.transfer_note":"Nota de transferencia",
+"pwa.shared_line_group":"Grupo de líneas compartidas",
+"apac.settings.test_speaker":"Probar altavoz",
+"pwa.phone.micro_try_to_access":"Intentando acceder a su micrófono",
+"pwa.meetings.transfer.in_progress":"En curso",
+"pwa.phone.zoom_phone_call":"Llamada de Zoom Phone",
+"pwa.office":"Oficina",
+"pwa.meet_button":"Reunir",
+"pwa.info_members":"Miembros",
+"pwa.my.contact":"Mis contactos",
+"pwa.one_is_unavailable":"{0} no está disponible",
+"pwa.message_message_will_disappear_f":"Este mensaje desaparecerá automáticamente en {0} s",
+"pwa.phone.obfuscate":"Para garantizar su privacidad, los valores introducidos mediante el teclado numérico están ocultos y silenciados.",
+"pwa.meeting_transfer_to_waiting_room":"Los participantes de la reunión se han transferido a la sala de espera",
+"pwa.feedback_satisfied":"Muy satisfecho",
+"pwa.phone_no_recent":"No reciente",
+"pwa.contacts_presence_DnD":"No molestar",
+"pwa.receive":"Recibir",
+"pwa.create":"Crear",
+"pwa.back_button":"Atrás",
+"pwa.meeting_id_pln":"ID de reunión o nombre de enlace personal",
+"pwa.frequency":"Frecuencia",
+"pwa.contacts_time_zone":"Zona horaria",
+"pwa.not_set":"No configurado",
+"pwa.phone.push_notifications.nothing":"Nada",
+"pwa.send_to_voicemail":"Enviar al buzón de mensajes de voz",
+"pwa.phone.hang_up":"Colgar",
+"pwa.phone_network_switch":"Conmutador de red",
+"pwa.phone.someone_is_calling":"{0} le está llamando",
+"pwa.phone_clear_all_call_history":"Borrar todo el historial de llamadas",
+"pwa.confirm":"Confirmar",
+"pwa.company_number":"Número de la compañía",
+"pwa.start":"Iniciar",
+"pwa.contact.invite_to_contact":"Invitar a Zoom",
+"pwa.phone.more_button":"Más",
+"pwa.rejected":"Rechazadas",
+"pwa.help_request":"{0} en {1} pidió(pidieron) ayuda",
+"pwa.you_are_sign_out":"Se ha cerrado su sesión",
+"pwa.otp_allow":"Permitir",
+"pwa.phone.only_sms_disabled":"Su administrador ha deshabilitado los SMS/MMS de Zoom Phone.",
+"pwa.upcoming":"Próximos",
+"pwa.fax":"Fax",
+"pwa.keyboard_instructions_navbar":"Presione shift+F10 para abrir el menú contextual. Presione Alt u Opción + flecha hacia abajo para mover la pestaña hacia la derecha. Presione Alt u Opción + flecha hacia arriba para mover la pestaña hacia la izquierda.",
+"pwa.conversation_summary":"Resumen de conversación",
+"pwa.phone.unable.to.delete.message":"No es posible eliminar el mensaje",
+"pwa.office_phone":"Teléfono de la oficina",
+"pwa.transferring":"Transfiriendo...",
+"pwa.phone_peer_number":"Número de homólogo",
+"pwa.grouping":"agrupación",
+"pwa.calling_number":"Llamando {0}...",
+"pwa.join_button":"Unirse",
+"pwa.otp_error_occured":"Se produjo un error",
+"apac.settings.mute_when_hoin":"Silenciar mi micrófono al unirme a una reunión",
+"pwa.about_content2":"Copyright © {0} Zoom Communications, Inc. Todos los derechos reservados.",
+"pwa.about_content1":"Versión",
+"pwa.do_not_allow":"No permitir",
+"pwa.home_num":"Número del domicilio",
+"pwa.contacts_other":"Otros",
+"pwa.upgrade.start":"Iniciar una nueva reunión con el llamador",
+"pwa.refresh":"Actualizar",
+"pwa.contacts_meet_button":"Reunir",
+"pwa.phone.someone":"alguien",
+"pwa.outgoing_by_for":"Llamada saliente por {0} para {1}",
+"pwa.shared_group":"GRUPO COMPARTIDO",
+"pwa.cci_notification_mute_during_call_desc":"Silencie las notificaciones de sonido solo durante las videollamadas o llamadas de voz del centro de contacto, las reuniones de Zoom y las llamadas de Zoom Phone.",
+"pwa.feedback.webinar":"seminario web",
+"pwa.feedback.meeting":"la reunión",
+"pwa.more_info_files_text":"Archivos",
+"pwa.meetings.transfer.from.notify.msg":"Su reunión cambiará de {0} a este dispositivo",
+"pwa.phone.already.recipient":"Ya está en los destinatarios",
+"pwa.settings_global_nav_instructions":"Arrastre los iconos para personalizar el orden de la barra de herramientas. Mueva los elementos de la sección Fijado a Más para establecer los que se muestran como fijados en la barra de herramientas",
+"apac.settings.mic_tip":"Haga clic en Probar micrófono para asegurarse de que los demás pueden oírle",
+"pwa.meet_with_video":"Reunirse con vídeo",
+"pwa.viocemail_load_failed":"Hubo un error al cargar el mensaje de voz, inténtelo nuevamente",
+"pwa.zm_p_in_progress":"Tiene una llamada telefónica en curso",
+"pwa.meetings.add_calendar_tooltip":"Conectar con su calendario de trabajo o personal para ver las próximas reuniones aquí",
+"pwa.renamed.by.host":"El anfitrión ha cambiado su nombre a {0}",
+"pwa.add_a_contact":"Añadir un contacto",
+"pwa.to_someone":"a {0}",
+"pwa.select_reason":"Seleccionar motivo",
+"apac.settings.see_self_as_active_when_speaking":"Verme a mí como el hablante actual mientras hablo",
+"pwa.enter_meeting_passcode":"Introducir código de acceso de la reunión",
+"pwa.delete_this_contact":"Eliminar {0}",
+"pwa.meetings.delete_failed_toast":"Error al eliminar la reunión",
+"pwa.invite_button":"Invitar",
+"pwa.meetings.start_in_mins":"Comienza en {0} minutos",
+"pwa.about_content4":"Copyright ©{0} Zoom Communications, Inc. Todos los derechos reservados.",
+"pwa.speaker":"Altavoz",
+"pwa.about_content3":"Copyright ©{0} Zoom Communications, Inc. Todos los derechos reservados.",
+"pwa.be_valid_email":"Debe ser una dirección de correo electrónico válida",
+"pwa.cci_notification_mute_during_call":"Silenciar durante reuniones y llamadas",
+"pwa.contact.invite_zoom_contact":"Invitar a contacto de Zoom",
+"pwa.feedback_product":"Área de producto",
+"pwa.item_name":"Nombre del elemento",
+"pwa.contacts_presence_calendar_event":"En un evento de calendario",
+"pwa.other_ph_num":"Otro número de teléfono",
+"pwa.contacts_button":"Contactos",
+"pwa.someone":"alguien",
+"pwa.f_l_name":"Nombre y apellido",
+"pwa.notice":"Aviso",
+"pwa.feedback_satsifcation_warning":"La puntuación de satisfacción es obligatoria.",
+"pwa.phone.only_calling_disabled":"Su administrador ha deshabilitado las llamadas de Zoom Phone.",
+"pwa.announcement_body":"Las capacidades de celebración y programación de reuniones no están permitidas para su cuenta de usuario.",
+"pwa.receive_shared_calls":"Recibir llamadas compartidas",
+"pwa.recording.unavailable":"Esta grabación no está disponible en este momento.",
+"pwa.phone_copy_number":"Copiar número",
+"pwa.zcc_p_over_zm_p":"Si continúa y hace una llamada de voz, su audio se transferirá de la llamada telefónica a su llamada de voz.",
+"pwa.cancel":"Cancelar",
+"pwa.phone.warm_transfer":"Transferencia en vivo",
+"pwa.view_event":"Ver evento",
+"pwa.zcc_p_over_zm_m":"Si continúa y hace una llamada de voz, su audio se transferirá de la reunión a su llamada de voz.",
+"pwa.settings_theme_notice":"Solo se aplica cuando el sistema utiliza el modo claro, más información",
+"pwa.contact_add_camera_control_f":"Ha añadido a {0} a su grupo de control de cámara",
+"pwa.phone.call_failed":"Error al llamar",
+"pwa.shared.contact.lists":"Listas de contactos compartidos",
+"pwa.phone.contact.admin":"Para usar el teléfono en la aplicación Zoom Web, póngase en contacto con su administrador.",
+"pwa.recording":"La reunión se está grabando",
+"pwa._notification_invite_contact_accepted":"{0} ha aceptado su solicitud de contacto",
+"pwa.restrict_ip_text":"No es posible acceder a las grabaciones desde la dirección IP actual",
+"pwa.starred":"Destacado",
+"pwa.phone.micro_access_error":"Ha habido un error al acceder a su micrófono",
+"pwa.hidden":"Oculta",
+"pwa.phone.pick_up_call":"{0} atendió la llamada",
+"pwa.do_not_show-again":"No volver a mostrar",
+"pwa.phone.block.number.block":"Bloquear número",
+"pwa.about_content":"Copyright ©2012-2022 Zoom Communications, Inc. Todos los derechos reservados.",
+"pwa.contact_items_enclose":"Se incluyen {0} elementos",
+"pwa.contact_camera_control_group":"Grupo de control de cámara",
+"pwa.zoom":"Zoom",
+"pwa.phone.number_pad_type_transfer_to":"Transferir a",
+"pwa.phone.micro_list_empty":"No se han encontrado dispositivos de micrófono",
+"pwa.upgrade_button":"Actualizar",
+"pwa.phone_history_list":"Lista de historial",
+"pwa.on_hold":"En espera",
+"pwa.detected_address_type_hint":"Zoom informará de su dirección de emergencia detectada durante una llamada de emergencia",
+"pwa.not.now":"Ahora no",
+"pwa.phone.message.delete":"Eliminar",
+"pwa.no_e911_detected":"No se ha detectado una dirección de emergencia",
+"pwa.phone_sms_list":"Lista de SMS",
+"pwa.meetings.starts_in_1_min":"Comienza en 1 minuto",
+"pwa.local_ip_and_port":"IP y puerto locales",
+"pwa.settings_theme_popover_1":"Los temas de color están disponibles cuando la aplicación está en modo claro o la configuración del sistema está en modo claro.",
+"pwa.settings_theme_popover_3":"El color gris oscuro se aplica automáticamente a las reuniones o seminarios web que utilicen un fondo de pantalla personalizado.",
+"pwa.unstar_this_contact":"Dejar de destacar este contacto",
+"pwa.settings_theme_popover_2":"El tema \"Clásico\" aplica un color gris a la barra de herramientas de navegación de la aplicación y establece la ventana de la reunión y el seminario web en un color gris oscuro.",
+"pwa.click.to.agree.2":"Al hacer clic en \"{0}\", acepta {1}",
+"pwa.click_to_dial_prompt":"¿Desea llamar o enviar un SMS al número seleccionado?",
+"pwa.packet":"Paquete",
+"pwa.click_to_dial_prompt_message":"¿Desea llamar o enviar un SMS al número seleccionado?",
+"pwa.stop":"Detener",
+"pwa.otp_signing_in":"Iniciando sesión en otro dispositivo",
+"pwa.contacts_dnd":"No molestar",
+"pwa.clear_history":"Borrar historial",
+};
+</script>
+<script nonce="" id="fingerprintjs-script" src="./Fullstack JS G91_files/fingerprintjs-3.3.3.min.js.descargar"></script>
+<script nonce="" type="text/javascript" src="./Fullstack JS G91_files/externals.0.min.js.descargar"></script>
+<script nonce="" type="text/javascript" src="./Fullstack JS G91_files/pwa-webim.js.descargar"></script>
+<script nonce="" type="text/javascript" src="./Fullstack JS G91_files/vendors.js.descargar"></script>
+<script nonce="" type="text/javascript" src="./Fullstack JS G91_files/main.js.descargar"></script><div id="pwaModalRoot"></div>
+
+</body></html>
